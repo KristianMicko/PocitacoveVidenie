@@ -1,10 +1,15 @@
+import numpy as np
+#Vyhladavanie lok. extremov 
 def non_max_suppression(img, D):
+    #zistenie rozmerov obrazka
     M, N = img.shape
+    #vytvorenie matice z nul podla rozmerov obrazka
     Z = np.zeros((M,N), dtype=np.int32)
+    #zistenie uhla gradientov
     angle = D * 180. / np.pi
     angle[angle < 0] += 180
 
-    
+    #vyhladavanie lok. extremov podla orientacie gradientu    
     for i in range(1,M-1):
         for j in range(1,N-1):
             try:
@@ -35,5 +40,5 @@ def non_max_suppression(img, D):
 
             except IndexError as e:
                 pass
-    
+    #navrat obrazka s tensenou hranou
     return Z
