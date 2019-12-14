@@ -105,8 +105,6 @@ V predchádzajúcej podkapitole sme sa venovali ako roztriediť pixely do kateg�
 
 ![picture](images/doc/hysteresis.jpg)
 
-<![endif]-->
-
 Postup je v tejto fáze jednoduchý a pekne znázornený na obr. vyššie. Jednoducho si vezme ako pri konvolúcii určité okolie napr. 3x3 a prechádzame každý pixel v obrázku a porovnávame stred sledovaného pixelu s okolitými pixelmi. Ak sa v okolí dotyčného pixelu nachádza aspoň jeden silný pixel, tak sledovanému slabý pixel zaradíme k hrane (priradíme mu max hodnotu). Ak táto podmienka nie je splnená tak slabý pixel vylúčime k priradeniu hrán.
 
 ![picture](images/doc/hysteresis_alg.jpg)
@@ -129,18 +127,5 @@ Tento algoritmus sa využíva na rozlíšenie objektov pri skúmaní snímok z m
 
 7. [https://stackoverflow.com/questions/52140247/naive-implementation-of-convolution-algorithm/52141580](https://stackoverflow.com/questions/52140247/naive-implementation-of-convolution-algorithm/52141580)
 
-# Pocitacove Videnie 2019
-
-Toto je Celosemestralna praca
-
-pre spustenie programu pouzite skript "python/python3 celyProgram.py" 
-alebo v pripade pouzitia implementacia v openCV "python/python3 celyProgramOpenCV.py"
-
-##Teoreticky popis o algoritme je v PV_Canny_Edge - teoreticky prehlad.docx
-
-##Dokument o pouziti python skriptov na detekciu inych obrazkov ako je defaultne a ina dokumentacia (o vykonanych experimentoch) 
-##sa nachadza v dokumente  Dokumentacia.docx
-
-Pri spusteni programu detekcie hran je prednastaveny skript na nacitanie obrazka 'hrany.jpg'
 
 Vyhotovili Kristián Mičko, Roman Haluška a Tomáš Krupa 
