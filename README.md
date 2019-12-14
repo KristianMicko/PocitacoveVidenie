@@ -39,6 +39,9 @@ kde σ je štandardnou odchýlkou Gaussovho rozloženia a µ je strednou hodnoto
 
 Úlohou Gaussovho filtra je hlavne odstránenie šumu a rozmazanie obrazu. Sigma určuje stupeň rozmazania obrazu. Vyššie hodnoty parametru sigma vyžadujú vytvorenie väčšieho jadra, aby bolo reprezentované dostatočne presne. Spravidla veľkosť jadra je určená ako (2K + 1) X (2K + 1), kde K = d3σe. Výstupom Gaussovho filtra je vážený priemer okolia každého pixelu, pričom váhy sú vyššie smerom k stredovým pixelom jadra. Vďaka tejto vlastnosti Gaussov filter poskytuje jemnejšie rozmazanie a zachováva hrany.
 
+Pri implementácii gaussovho jadra sme zadefinovali funkciu “gaussian_kernel”, ktorá na vstupe očakáva veľkosť matice a sigmu, ktorá je defaultne nastavená na hodnotu 1. Pre výpočet gassovej maticke sme použili vyššie vyjadrený vzťah o Gaussovom rozložení v 2D.
+
+![picture](images/doc/gausian_kernel_alg.jpg)
 
 # Pocitacove Videnie 2019
 
