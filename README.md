@@ -26,7 +26,7 @@ kde K(u, v) je hodnota výsledku na pozícii [u, v], symbol ⊗ je operátor kon
 
 Konvolúciu sme implementovali ako funkciu, ktorá očakáva na vstupe pôvodný obrázok a Gaussove jadro. Následne prechádza obrázok pixel po pixely a prenásobuje a sčítava jednotlivé hodnoty hodnotami na zadanom indexe v Gaussovej matici až pokiaľ neprejde cez celý obrázok.
 
-![picture](images/doc/convolution_alg.jpg)
+![picture](images/doc/convolution_alg_1.jpg)
 
 ### 1.2 Gaussov filter
 Medzi lineárne vyhladzovacie filter patrí aj Gaussov filter. Jadro Gaussovho filtra je reprezentované charakteristickým zvonovitým tvarom Gaussovej krivky. Gaussova krivka je v 1D vyjadrená vzťahom
@@ -41,7 +41,7 @@ kde σ je štandardnou odchýlkou Gaussovho rozloženia a µ je strednou hodnoto
 
 Pri implementácii gaussovho jadra sme zadefinovali funkciu “gaussian_kernel”, ktorá na vstupe očakáva veľkosť matice a sigmu, ktorá je defaultne nastavená na hodnotu 1. Pre výpočet gassovej maticke sme použili vyššie vyjadrený vzťah o Gaussovom rozložení v 2D.
 
-![picture](images/doc/gausian_kernel_alg.jpg)
+![picture](images/doc/gausian_kernel_alg_2.jpg)
 
 ## 2. Gradient calculation – výpočet gradientu
 Krok výpočtu gradientu zisťuje intenzitu a smer hrany vypočítaním gradientu obrázka pomocou operátorov detekcie okrajov. Hrany zodpovedajú zmene intenzity pixelov. Najjednoduchším spôsobom na detekciu je použitie filtrov, ktoré zvýrazňujú túto zmenu intenzity v oboch smeroch a to horizontálne na osi x aj vertikálne na osi y.
@@ -49,7 +49,7 @@ Krok výpočtu gradientu zisťuje intenzitu a smer hrany vypočítaním gradient
 ### 2.1 Sobel operator or filter
 Keď je obraz vyhladený môžeme implementovať konvolúciou s jadrom Sobel Kx a Ky. Sobel operátor alebo filter využíva dve matice Gx pre x os a Gy pre y os o rozmere 3x3 ako konvolucne jadro pri konvolúcii pôvodného orázku.
 
-![picture](images/doc/sobel_kernel.jpg)
+![picture](images/doc/sobel_kernel_3.jpg)
 
 Súradnica x je tu definovaná ako zvyšujúca sa v smere „doprava“ a súradnica y je definovaná ako zvyšujúca sa v smere „dole“. V každom bode na obrázku sa výsledné aproximácie gradientu môžu kombinovať, aby sa získala veľkosť gradientu, s použitím vzorca
 
@@ -87,7 +87,7 @@ Postup pre metódu Non-Maximum Suppression je teda nasledovný:
 
 Výsledkom algoritmu je obrázok s tenšími hranami
 
-![picture](images/doc/non_maximum_alg.jpg)
+![picture](images/doc/non_maximum_alg_4.jpg)
 
 Po spracovaní obrazu predchádzajúcimi krokmi je potrebné nastaviť finálny obraz do binárnej podoby tak, že ohraničené hrany budú mať bielu farbu a ostatné pixely mimo hrán budú mať čiernu farbu.  Na to slúžia tieto 2 metódy: dvojité prahovanie a hysterezne rozlíšenie hrán.
 
@@ -107,7 +107,7 @@ V predchádzajúcej podkapitole sme sa venovali ako roztriediť pixely do kateg�
 
 Postup je v tejto fáze jednoduchý a pekne znázornený na obr. vyššie. Jednoducho si vezme ako pri konvolúcii určité okolie napr. 3x3 a prechádzame každý pixel v obrázku a porovnávame stred sledovaného pixelu s okolitými pixelmi. Ak sa v okolí dotyčného pixelu nachádza aspoň jeden silný pixel, tak sledovanému slabý pixel zaradíme k hrane (priradíme mu max hodnotu). Ak táto podmienka nie je splnená tak slabý pixel vylúčime k priradeniu hrán.
 
-![picture](images/doc/hysteresis_alg.jpg)
+![picture](images/doc/hysteresis_alg_6.jpg)
 
 ## 6. Využitie algoritmu v praxi
 Tento algoritmus sa využíva na rozlíšenie objektov pri skúmaní snímok z medicíny, záberov z družice Zeme, prieskumných lietadiel, pri trénovaní rôznych neurónových sieti. Hlavným významom detekcie hrán je vyhľadať miesta zo značne výraznými hodnotami jasu. Tieto miesta môžeme nazývať ako hraničné miesta objektov. Metódy detekcie hrán takéto miesta vyhľadávajú a pomocou rôznych matematických metód sa snažia aproximovať krivky jednotlivých skúmaných objektov. Pri veľkej kvalite obrázku je spracovanie informácii výpočtovo náročné a preto sa navrhli rôzne algoritmy pre extrakciu hrán z obrazu, aby boli zachované dôležité informácie v obraze a zároveň, aby sa optimalizovala rýchlosť výpočtu spracovania informácii. Vďaka tomu môžeme digitálne vyhodnocovať informácie z obrazov a tak dosiahnuť vyššiu automatizáciu činnosti v bežnom živote.
