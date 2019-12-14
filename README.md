@@ -26,6 +26,8 @@ kde K(u, v) je hodnota výsledku na pozícii [u, v], symbol ⊗ je operátor kon
 
 Konvolúciu sme implementovali ako funkciu, ktorá očakáva na vstupe pôvodný obrázok a Gaussove jadro. Následne prechádza obrázok pixel po pixely a prenásobuje a sčítava jednotlivé hodnoty hodnotami na zadanom indexe v Gaussovej matici až pokiaľ neprejde cez celý obrázok.
 
+![picture](images/doc/convolution_alg.jpg)
+
 ### 1.2 Gaussov filter
 Medzi lineárne vyhladzovacie filter patrí aj Gaussov filter. Jadro Gaussovho filtra je reprezentované charakteristickým zvonovitým tvarom Gaussovej krivky. Gaussova krivka je v 1D vyjadrená vzťahom
 
