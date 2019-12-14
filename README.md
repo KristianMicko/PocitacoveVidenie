@@ -49,7 +49,7 @@ Krok výpočtu gradientu zisťuje intenzitu a smer hrany vypočítaním gradient
 ### 2.1 Sobel operator or filter
 Keď je obraz vyhladený môžeme implementovať konvolúciou s jadrom Sobel Kx a Ky. Sobel operátor alebo filter využíva dve matice Gx pre x os a Gy pre y os o rozmere 3x3 ako konvolucne jadro pri konvolúcii pôvodného orázku.
 
-![picture](images/doc/sobel_kernel_3.jpg)
+![picture](images/doc/sobel_kernel.jpg)
 
 Súradnica x je tu definovaná ako zvyšujúca sa v smere „doprava“ a súradnica y je definovaná ako zvyšujúca sa v smere „dole“. V každom bode na obrázku sa výsledné aproximácie gradientu môžu kombinovať, aby sa získala veľkosť gradientu, s použitím vzorca
 
@@ -61,7 +61,7 @@ Súradnica x je tu definovaná ako zvyšujúca sa v smere „doprava“ a súrad
 
 Pri implementácii sme vytvorili konvolučné jadro pre x a y os. Následne sme aplikovali konvolúciu na pôvodný obrázok s vytvoreným konvolučným jadrom pre obe osi zvlášť. Následne sme aplikovali vyššie uvedené vzorce na výpočet veľkosti a smeru gradientu.
 
-![picture](images/doc/sobel_filter_alg.jpg)
+![picture](images/doc/sobel_filter_alg_3.jpg)
 
 ## 3. Non-Maximum Suppression - výpočet lokálnych extrémov
 Po predchádzajúcich krokoch možete v obrázku vidieť, že niektoré hrany sú tenké, iné zase hrubé.  Metódou non- maximum suppression dosiahneme potlačenie hrubých hrán.
