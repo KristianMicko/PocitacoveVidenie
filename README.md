@@ -28,9 +28,9 @@ Konvolúciu sme implementovali ako funkciu, ktorá očakáva na vstupe pôvodný
 
 ### 1.2 Gaussov filter
 Medzi lineárne vyhladzovacie filter patrí aj Gaussov filter. Jadro Gaussovho filtra je reprezentované charakteristickým zvonovitým tvarom Gaussovej krivky. Gaussova krivka je v 1D vyjadrená vzťahom
-
+![picture](images/doc/vz1.png)
 kde σ je štandardnou odchýlkou Gaussovho rozloženia a µ je strednou hodnotou. Parameter σ graf rozširuje a parameter µ posúva graf pozdĺž osi x. Podobne Gaussovo rozloženie v 2D, kde µ = 0, je vyjadrené vzťahom
-
+![picture](images/doc/vz2.png)
 
 
 # Pocitacove Videnie 2019
