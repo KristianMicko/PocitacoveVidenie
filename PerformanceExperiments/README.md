@@ -12,5 +12,5 @@ Tento prikaz bol vykonany v Rstudio
 Results
 p hodnota= 2.2*10^-16
 Graph to support my evidence + description
-![picture](images/grafy/Vlastna.png)
+![picture](images/doc/Vlastna.png)
 Conclusion
