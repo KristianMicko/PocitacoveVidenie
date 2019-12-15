@@ -10,7 +10,7 @@ Conclusion
 
 
 
-Vysledky detekcie hran
+Vysledky detekcie hran:
 
 ### Pôvodný obrázok
 
@@ -30,3 +30,28 @@ Vysledky detekcie hran
 ### Pôvodný obrázok
 
 ![picture](hrany.jpg)
+
+
+### Vlastná implementácia
+
+![picture](ZabaVlastna.jpg)
+
+
+### Implementácia v OpenCV
+
+![picture](ZabaOpenCV.jpg)
+
+
+### Pôvodný obrázok
+
+![picture](lena.jpg)
+
+
+### Vlastná implementácia
+
+![picture](lenaVlastna.jpg)
+
+
+### Implementácia v OpenCV
+
+![picture](LenaOpencv.jpg)
