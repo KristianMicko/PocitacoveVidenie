@@ -31,7 +31,7 @@ def detect(img):
 	#vystupny obrazok
 	return img
 #importovanie obrazka do programu	
-img = mpimg.imread('hrany.jpg')
+img = mpimg.imread('2.jpg')
 img = np.asarray(img)
 
 

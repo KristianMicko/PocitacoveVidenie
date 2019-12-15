@@ -55,3 +55,18 @@ Vysledky detekcie hran:
 ### Implementácia v OpenCV
 
 ![picture](LenaOpencv.jpg)
+
+
+### Pôvodný obrázok
+
+![picture](Muz.jpg)
+
+
+### Vlastná implementácia
+
+![picture](Muz.png)
+
+
+### Implementácia v OpenCV
+
+![picture](MuzVOpenCV.png)
