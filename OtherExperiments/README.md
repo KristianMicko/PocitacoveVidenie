@@ -19,12 +19,12 @@ Vysledky detekcie hran
 
 ### Vlastná implementácia
 
-![picture](DamaVlastna.tif)
+![picture](DamaVlastna.jpg)
 
 
 ### Implementácia v OpenCV
 
-![picture](DamaOpenCV.tif)
+![picture](DamaOpenCV.jpg)
 
 
 ### Pôvodný obrázok
