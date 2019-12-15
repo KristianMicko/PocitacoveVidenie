@@ -13,4 +13,5 @@ Results
 p hodnota= 2.2*10^-16
 Graph to support my evidence + description
 ![picture](https://github.com/KristianMicko/PocitacoveVidenie/blob/master/images/grafy/Opencv.svg)
+![picture](https://github.com/KristianMicko/PocitacoveVidenie/blob/master/images/grafy/Vlastne.svg)
 Conclusion
