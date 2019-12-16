@@ -1,26 +1,25 @@
-Experiment 1.
+# Experiment
 
-Hypothesis H0:
+**Hypothesis H0**
 stredna a priemerna hodnota vlastnej implementacie a implementacie v openCV su rovnake
 
-Hypothesis H1:
+**Hypothesis H1**
 stredna a priemerna hodnota vlastnej implementacie a implementacie v openCV su odlisne
 
-Experiment description
-Na overenie tejto hypotezy bol spravený párový t-test
-
-Process of validation (can be matlab function and its description) - calculation
+# Postup riešenia
+Na overenie tejto hypotézy bol spravený párový t-test
 
 t.test(x$V1,y$V1, paired = TRUE, conf.level = 0.95)$p.value
-Tento prikaz bol vykonany v Rstudio
+Tento príkaz bol vykonaný v Rstudio
 
-Results
+# Výsledok
 p hodnota= 2.2*10^-16
-Graph to support my evidence + description
+
+**Grafy meraní**
 ![picture](https://github.com/KristianMicko/PocitacoveVidenie/blob/master/images/grafy/Opencv.svg)
 ![picture](https://github.com/KristianMicko/PocitacoveVidenie/blob/master/images/grafy/Vlastne.svg)
 
-Conclusion
+# Vyhodnotenie
 Implementácia Cannyho hranového detektora v openCV knižnica je rýchlejšia oproti našej mnohokrát. 
 Dôvodom je implementácia knižnice v jazyku C++, ktorý je kompilovaný priamo do strojového kódu a tým pádom je vykonanie kódu omnoho rýchlejšie. 
 Náš kód bol implementovaný celý v jazyku python, ktorý je interpretovaným jazykom, to znamená, 
